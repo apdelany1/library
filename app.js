@@ -35,6 +35,7 @@ function Book(title, author, pages, read) {
 const table = document.querySelector("#tableBod");
 
 function addBookToLibrary() {
+    table.innerHTML = ""
     myLibrary.forEach(element => {
         let row = document.createElement("tr")
         table.append(row);
@@ -55,6 +56,37 @@ function addBookToLibrary() {
         row.append(cfour)
     });
 }
+
+const bookInput = document.querySelector("#bookInput")
+const authorInput = document.querySelector("#authorInput")
+const pageCount = document.querySelector("#pageCount")
+const select = document.querySelector("#select")
+
+const button = document.querySelector("button")
+
+button.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const mainForm = document.querySelector("form");
+
+    let title = mainForm[1].value
+    let author = mainForm[2].value
+    let pages = mainForm[3].value
+    if (mainForm[4].value == "yes") {
+        let read = true;
+        let newAddition = new Book(title, author, pages, read);
+        myLibrary.push(newAddition)
+        addBookToLibrary();
+    } else {
+        let read = false;
+        let newAddition = new Book(title, author, pages, read);
+        myLibrary.push(newAddition)
+        addBookToLibrary();
+    }
+
+
+
+});
 
 addBookToLibrary()
 
