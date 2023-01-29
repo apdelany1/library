@@ -7,8 +7,13 @@ myLibrary.push ({
     read: true
 })
 
+myLibrary.push ({
+    title: "Wrinkle in Time",
+    author: "Jake Lamotta",
+    pages: 2007,
+    read: false
+})
 
-console.log(myLibrary)
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -27,6 +32,30 @@ function Book(title, author, pages, read) {
     }
 }
 
+const table = document.querySelector("#tableBod");
+
 function addBookToLibrary() {
-    //TODO
+    myLibrary.forEach(element => {
+        let row = document.createElement("tr")
+        table.append(row);
+
+        let cone = document.createElement("td")
+        let ctwo = document.createElement("td")
+        let cthree = document.createElement("td")
+        let cfour = document.createElement("td")
+
+        cone.innerText = element.title;
+        ctwo.innerText = element.author;
+        cthree.innerText = element.pages;
+        cfour.innerText = element.read;
+        
+        row.append(cone)
+        row.append(ctwo)
+        row.append(cthree)
+        row.append(cfour)
+    });
 }
+
+addBookToLibrary()
+
+
