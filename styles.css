@@ -7,10 +7,7 @@
 
 .container {
     height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "body side";
-    grid-template-columns: 80% 20%;
+
 }
 
 h1 {
@@ -19,7 +16,8 @@ h1 {
 
 .main {
     height: 100vh;
-    background-color: rgb(255, 248, 145);
+    /* background-color: rgb(240, 239, 230); */
+    background: url(axiom-pattern.png);
     grid-area: body;
     display: flex;
     flex-direction: column;
@@ -29,10 +27,18 @@ h1 {
 
 .sidebar {
     grid-area: side;
-    background-color: rgba(238, 215, 12, 0.514);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 90px;
+    top: 30%;
+}
+span {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    cursor: pointer;
 }
 
 form {
@@ -52,11 +58,12 @@ form {
 
 fieldset
 {
-  background-color:rgb(245, 224, 175);
-  padding:16px;	
+  background-color: #a3b18a;
+  padding: 10px;	
   font-size: 1.9rem;
-  border: 2px dashed rgb(247, 150, 4);
+  border: 2px dotted #344e41;
   border-radius: 10px;
+  color: #344e41;
 }
 
 legend {
@@ -67,26 +74,77 @@ input,
 select {
     width: 100%;
     margin: 10px 0 ;
-    padding: 6px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-align: left;
     background-color: rgb(255, 255, 255);
     border: none;
-    box-shadow: 4px 4px 9px rgb(255, 115, 0);
+    box-shadow: 4px 4px 9px #344e41;
 }
 
 button {
-    width: 50%;
+    padding: 9px 5px;
+    border: 1px solid #344e41;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    letter-spacing: 2px;
+
 }
 
+button:hover {
+    border: 1px solid black;
+}
+
+thead {
+    background-color: #344e41;
+    color: #a3b18a;
+}
 
 td,
 th {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid #344e41;
     padding: 10px;
 }
 
 table {
-    border: 2px solid rgb(200, 200, 200);
-    width: 70%
+    width: 60%
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #dad7cd;
+}
+
+
+/* Javascript toggle classes */
+.display {
+    display: none;
+}
+
+.addBook {
+    position: absolute;
+    right:140px;
+    top: 40%;
+    width: 200px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: none;
+    border: .5px solid #344e41;
+    box-shadow: 7px 7px 1px;
+    line-height: 2;
+    font-size: 1.1rem;
+
+}
+
+.addBook:hover{
+    background-color: #588157;
+    color: white;
+    box-shadow: 20px 20px 40px;
+    transition: all .4s ease;
+    font-weight: 800;
+    
 }

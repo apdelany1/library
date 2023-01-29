@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
+        <button class="addBook">Add Book to Library</button>
+        <div class="sidebar display">
             <form action="#">
                 <fieldset>
                     <legend>Add A Book</legend>
                     <div class="collective">
+                        <span class="material-symbols-outlined">
+                            close
+                            </span>
                         <input type="text" placeholder="Book" id="bookInput">
                         <input type="text" placeholder="Author" id="authorInput">
                         <input type="text" placeholder="Page Count" id="pageCount">
@@ -23,13 +27,13 @@
                             <option value="no">No</option>
                             <option value="yes">Yes</option>
                         </select>
-                        <button type="submit">Add book?</button>
+                        <button type="submit" id="button">Add book?</button>
                     </div>
                 </fieldset>
             </form>
         </div>
         <div class="main">
-            <h1>Book Club</h1>
+            <h1>My Library</h1>
             <table>
                 <thead>
                     <tr>
@@ -37,6 +41,7 @@
                         <th>Author</th>
                         <th>Page Count</th>
                         <th>Read it?</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody id="tableBod"></tbody>

@@ -9,7 +9,7 @@ myLibrary.push ({
 
 myLibrary.push ({
     title: "Wrinkle in Time",
-    author: "Jake Lamotta",
+    author: "Jake Jillinhall",
     pages: 2007,
     read: false
 })
@@ -44,6 +44,12 @@ function addBookToLibrary() {
         let ctwo = document.createElement("td")
         let cthree = document.createElement("td")
         let cfour = document.createElement("td")
+        let deleteBtn = document.createElement("button")
+        deleteBtn.classList.add("button")
+        deleteBtn.innerText = "Delete"
+        let cfive = document.createElement("td")
+
+        cfive.append(deleteBtn);
 
         cone.innerText = element.title;
         ctwo.innerText = element.author;
@@ -54,15 +60,30 @@ function addBookToLibrary() {
         row.append(ctwo)
         row.append(cthree)
         row.append(cfour)
+        row.append(cfive)
+
+        document.querySelector("form").reset()
     });
 }
+
+const closeAddBox = document.querySelector("span")
+const openAddBox = document.querySelector(".addBook")
+
+const sideBar = document.querySelector(".sidebar")
+closeAddBox.addEventListener("click", function(e) {
+    sideBar.classList.toggle("display");
+})
+openAddBox.addEventListener("click", function(e) {
+    sideBar.classList.toggle("display");
+})
+
 
 const bookInput = document.querySelector("#bookInput")
 const authorInput = document.querySelector("#authorInput")
 const pageCount = document.querySelector("#pageCount")
 const select = document.querySelector("#select")
 
-const button = document.querySelector("button")
+const button = document.querySelector("#button")
 
 button.addEventListener("click", function(event) {
     event.preventDefault();
