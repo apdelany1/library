@@ -12,13 +12,20 @@
     <div class="container">
         <div class="sidebar">
             <form action="#">
-                <input type="text" placeholder="Book">
-                <input type="text" placeholder="Author">
-                <input type="text" placeholder="Page Count">
-                <div class="check">
-                    <input type="checkbox" name="read">
-                    <label for="read"> I have a bike</label>
-                </div>
+                <fieldset>
+                    <legend>Add A Book</legend>
+                    <div class="collective">
+                        <input type="text" placeholder="Book">
+                        <input type="text" placeholder="Author">
+                        <input type="text" placeholder="Page Count">
+                        <select name="select" id="select">
+                            <option value="">--Have you read this book?</option>
+                            <option value="no">No</option>
+                            <option value="yes">yes</option>
+                        </select>
+                        <button type="submit">Add book?</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
         <div class="main">
