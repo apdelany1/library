@@ -1,3 +1,15 @@
+let myLibrary = [];
+
+myLibrary.push ({
+    title: "1984",
+    author: "George Orwell",
+    pages: 1982,
+    read: true
+})
+
+
+console.log(myLibrary)
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -13,4 +25,8 @@ function Book(title, author, pages, read) {
 
         return(`This book is called ${this.title} by ${this.author}, ${this.pages} pages, ${haveRead}`);        
     }
+}
+
+function addBookToLibrary() {
+    //TODO
 }
