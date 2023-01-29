@@ -1,3 +1,57 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "body body body side"
+    "body body body side"
+    "body body body side"
+    "body body body side";
+    grid-template-columns:1fr;
+}
+
+.main {
+    height: 100vh;
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    padding: 50px;
+}
+
+.sidebar {
+    grid-area: side;
+    background-color: rgba(0, 0, 255, 0.219);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 50%;
+}
+
+.check {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+
+
 td,
 th {
     border: 1px solid rgb(190, 190, 190);
@@ -6,4 +60,5 @@ th {
 
 table {
     border: 2px solid rgb(200, 200, 200);
+    width: 70%
 }

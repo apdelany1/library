@@ -9,14 +9,30 @@
 
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Book</th>
-            <th>Author</th>
-            <th>Page Count</th>
-            <th>Read it?</th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="sidebar">
+            <form action="#">
+                <input type="text" placeholder="Book">
+                <input type="text" placeholder="Author">
+                <input type="text" placeholder="Page Count">
+                <div class="check">
+                    <input type="checkbox" name="read">
+                    <label for="read"> I have a bike</label>
+                </div>
+            </form>
+        </div>
+        <div class="main">
+            <h1>Book Club</h1>
+            <table>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Page Count</th>
+                    <th>Read it?</th>
+                </tr>
+            </table>
+        </div>
+    </div>
 
 <script src="app.js"></script>
 </body>
