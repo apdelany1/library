@@ -46,6 +46,7 @@ function addBookToLibrary() {
         let cfour = document.createElement("td")
         let deleteBtn = document.createElement("button")
         deleteBtn.classList.add("button")
+        deleteBtn.classList.add("del")
         deleteBtn.innerText = "Delete"
         let cfive = document.createElement("td")
 
@@ -87,8 +88,12 @@ const button = document.querySelector("#button")
 
 button.addEventListener("click", function(event) {
     event.preventDefault();
-
     const mainForm = document.querySelector("form");
+    if (mainForm[1].value == "" || mainForm[2].value == "" || mainForm[3].value == "") {
+        alert("Please fill out all fields");
+        return 0;
+    }
+    
 
     let title = mainForm[1].value
     let author = mainForm[2].value
@@ -108,6 +113,15 @@ button.addEventListener("click", function(event) {
 
 
 });
+
+let del = document.querySelectorAll("td");
+
+del.forEach((useritem => {
+    addEventListener("click", (e) => {
+        console.log("Hello")
+    
+    })
+}))
 
 addBookToLibrary()
 

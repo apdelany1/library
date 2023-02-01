@@ -12,12 +12,16 @@
 
 h1 {
     padding: 50px;
+    font-size: 5rem;
+    color: #344e41;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 1px black;
 }
 
 .main {
     height: 100vh;
     /* background-color: rgb(240, 239, 230); */
-    background: url(axiom-pattern.png);
+    background: url(arabesque.png);
     grid-area: body;
     display: flex;
     flex-direction: column;
@@ -39,6 +43,11 @@ span {
     top: 25px;
     right: 10px;
     cursor: pointer;
+}
+
+.icon {
+    width: 60px;
+    padding: 5px;
 }
 
 form {
@@ -89,26 +98,26 @@ button {
     width: 100%;
     border-radius: 10px;
     letter-spacing: 2px;
-
 }
 
-button:hover {
-    border: 1px solid black;
-}
+
 
 thead {
     background-color: #344e41;
     color: #a3b18a;
+        max-width: 60%;
 }
 
 td,
 th {
-    border: 1px solid #344e41;
+    border: 1px solid #20aa05;
     padding: 10px;
+    max-width: 20%;
 }
 
 table {
-    width: 60%
+    max-width: 60%;
+    box-shadow: 5px 5px 25px;
 }
 
 tbody tr:nth-child(odd) {

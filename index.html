@@ -19,11 +19,11 @@
                         <span class="material-symbols-outlined">
                             close
                             </span>
-                        <input type="text" placeholder="Book" id="bookInput">
-                        <input type="text" placeholder="Author" id="authorInput">
-                        <input type="text" placeholder="Page Count" id="pageCount">
+                        <input type="text" placeholder="Book" id="bookInput" required>
+                        <input type="text" placeholder="Author" id="authorInput" required>
+                        <input type="text" placeholder="Page Count" id="pageCount" required>
                         <select name="select" id="select">
-                            <option value="">--Have you read this book?</option>
+                            <option value="" autofocus disabled>--Have you read this book?--</option>
                             <option value="no">No</option>
                             <option value="yes">Yes</option>
                         </select>
@@ -33,7 +33,7 @@
             </form>
         </div>
         <div class="main">
-            <h1>My Library</h1>
+            <h1> <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1253/1253618.png?w=826&t=st=1675218166~exp=1675218766~hmac=fe8c72859ebef02dc8ecc8d6f49ab4593cf690edb0338710ec66aa16200bfce6" alt=""> My Library</h1>
             <table>
                 <thead>
                     <tr>
